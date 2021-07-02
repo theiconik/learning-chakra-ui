@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { ChakraProvider, Flex, Heading, Input, Button } from "@chakra-ui/react";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ChakraProvider>
+      <div className="App">
+        <Flex height="100vh" alignItems="center" justifyContent="center">
+          <Flex direction="column" background="gray.100" p={12} rounded={6}>
+            <Heading mb={6}>Log in</Heading>
+            <Input placeholder="someone@email.com" variant="filled" mb={3} type="email" />
+            <Input placeholder="********" variant="filled" mb={3} type="password" />
+            <Button colorScheme="teal">LOGIN</Button>
+          </Flex>
+        </Flex>
+      </div>
+    </ChakraProvider>
   );
 }
 
