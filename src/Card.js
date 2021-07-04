@@ -21,7 +21,7 @@ function Card() {
     <Flex h="100vh" justifyContent="center" alignItems="center">
       <Flex direction="column">
         <Box
-          w="400px"
+          w={['300px', '300px', '400px', '400px']}
           rounded="20px"
           overflow="hidden"
           boxShadow="lg"
