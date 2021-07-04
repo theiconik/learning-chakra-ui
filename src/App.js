@@ -1,14 +1,16 @@
-import "./App.css";
-import LoginCard from "./learning/Logincard"
-import {ChakraProvider} from "@chakra-ui/react"
-import Card from "./learning/Card"
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-function App() {
+import Landing from "./pages/Landing";
+
+export default function App() {
   return (
-    <ChakraProvider>
-      <Card />
-    </ChakraProvider>
+    <Router>
+      <Switch>
+        <Route path="/">
+          <Landing />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
-
-export default App;
