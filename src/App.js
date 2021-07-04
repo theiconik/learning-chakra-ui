@@ -1,7 +1,7 @@
 import "./App.css";
-import LoginCard from "./Logincard"
+import LoginCard from "./learning/Logincard"
 import {ChakraProvider} from "@chakra-ui/react"
-import Card from "./Card"
+import Card from "./learning/Card"
 
 function App() {
   return (
